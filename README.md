@@ -1,7 +1,7 @@
 # imgprofi
 A tiny library to simplify generation of imgproxy urls
 
-#usage
+# usage
 For example you want to simply resize your image to other height and width using imgproxy. To get proper imgproxy url you need the following
 ```
 config = {
@@ -23,6 +23,6 @@ You will get a ready-to-go imgproxy link
 http://localhost:8000/6cy4IRuQ1nQW8qGVmNvPdynjmkuwUEx-XhGw_C_kQmA/fill/300/300/ce/0/aHR0cDovL2ltZy5l/eGFtcGxlLmNvbS9w/cmV0dHkvaW1hZ2Uu/anBn
 ```
 
-#warning
+# warning
 
 If you want to have generated link working you need to have imgproxy instance up and running on ```config['imgproxy_host']```, in our example it is ```http://localhost:8000```
