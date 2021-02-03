@@ -1,0 +1,5 @@
+venv
+.idea/
+dist/
+imgprofi/__pycache__/
+tests/__pycache__/

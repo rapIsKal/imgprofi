@@ -1,4 +1,4 @@
-from urlgen.urls import UrlGenerator
+from imgprofi.urls import UrlGenerator
 
 
 def test_unsigned_url_basic():
