@@ -12,6 +12,6 @@ before_script:
   - ./cc-test-reporter before-build
 # command to run tests
 script:
-  - python -m pytest --cov=import_me --cov-report=xml
+  - python -m pytest --cov=./ --cov-report=xml
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
