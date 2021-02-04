@@ -1,8 +1,9 @@
 [tool.poetry]
 name = "imgproxy_python"
-version = "0.0.1"
+version = "0.0.2"
 description = "A tiny library to simplify generation of imgproxy urls"
 authors = ["Vladislav_Gorelov <rap-is-kal-again@yandex.ru>"]
+readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.6"
