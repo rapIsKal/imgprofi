@@ -32,3 +32,7 @@ http://localhost:8000/6cy4IRuQ1nQW8qGVmNvPdynjmkuwUEx-XhGw_C_kQmA/fill/300/300/c
 # warning
 
 If you want to have generated link working you need to have imgproxy instance up and running on ```config['imgproxy_host']```, in our example it is ```http://localhost:8000```
+
+# diclaimer
+
+for now only basic urls are supported in version 0.0.1. Advanced url generation is coming
