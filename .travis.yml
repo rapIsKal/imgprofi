@@ -5,10 +5,13 @@ python:
   - "3.8"
   - "3.9"
 # command to install dependencies
-install:
+before_script:
   - pip install -r requirements.txt
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-0.7.0-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
 # command to run tests
 script:
   - python -m pytest --cov=./
-after_success:
-  - bash <(curl -s https://codecov.io/bash)
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
