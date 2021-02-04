@@ -3,4 +3,3 @@ venv
 dist/
 imgproxy_python/__pycache__/
 tests/__pycache__/
-.coverage
