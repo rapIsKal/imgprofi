@@ -1,4 +1,4 @@
-from imgprofi.urls import UrlGenerator
+from imgproxy_python.urls import UrlGenerator
 
 
 def test_unsigned_url_basic():
