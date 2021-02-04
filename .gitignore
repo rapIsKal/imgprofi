@@ -1,5 +1,5 @@
 venv
 .idea/
 dist/
-imgprofi/__pycache__/
+imgproxy_python/__pycache__/
 tests/__pycache__/

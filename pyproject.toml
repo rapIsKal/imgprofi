@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "imgprofi"
+name = "imgproxy_python"
 version = "0.0.1"
-description = "A tiny library to generate imgproxy signed url"
+description = "A tiny library to simplify generation of imgproxy urls"
 authors = ["Vladislav_Gorelov <rap-is-kal-again@yandex.ru>"]
 
 [tool.poetry.dependencies]
