@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.com/rapIsKal/imgproxy-python.svg?branch=main)](https://travis-ci.com/rapIsKal/imgproxy-python)
 ![PyPI](https://img.shields.io/pypi/v/imgproxy_python)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/imgproxy_python)](https://pypi.org/project/imgproxy_python/)
+[![codecov](https://codecov.io/gh/rapIsKal/imgproxy_python/branch/main/graph/badge.svg?token=54N7X17WRG)](https://codecov.io/gh/rapIsKal/imgproxy_python)
 
 
 # imgproxy_python
