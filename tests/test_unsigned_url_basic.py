@@ -16,6 +16,7 @@ def test_unsigned_url_basic():
         }
     }
     url = 'http://img.example.com/pretty/image.jpg'
-    expected_url = '/MlF9VpgaHqcmVK3FyT9CTJhfm0rfY6JKnAtxoiAX9t0/fill/300/300/no/1/aHR0cDovL2ltZy5l/eGFtcGxlLmNvbS9w/cmV0dHkvaW1hZ2Uu/anBn.png'
+    expected_url = '/MlF9VpgaHqcmVK3FyT9CTJhfm0rfY6JKnAtxoiAX9t0/fill/300/300/' \
+                   'no/1/aHR0cDovL2ltZy5l/eGFtcGxlLmNvbS9w/cmV0dHkvaW1hZ2Uu/anBn.png'
     urlgen = UrlGenerator(url, config)
     assert urlgen.generate_signed_url() == expected_url

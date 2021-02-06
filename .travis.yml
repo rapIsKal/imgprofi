@@ -12,6 +12,9 @@ before_script:
   - ./cc-test-reporter before-build
 # command to run tests
 script:
+  - flake8 .
+  - mypy imgproxy_python
+  - isort .
   - python -m pytest --cov=./ --cov-report=xml
 after_script:
   - ./cc-test-reporter after-build -r c4a84c5551b0e4b6c8d7636b5954c38af3e62a018121c7b1a95d644fb0c12169 --exit-code $TRAVIS_TEST_RESULT

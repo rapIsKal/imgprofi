@@ -2,11 +2,12 @@ import base64
 import hashlib
 import hmac
 import textwrap
+from typing import Any, Dict
 from urllib.parse import urljoin
 
 
 class UrlGenerator:
-    def __init__(self, url, config):
+    def __init__(self, url: str, config: Dict[str, Any]) -> None:
         self.url = url
         self.key = bytes.fromhex(config['imgproxy_key'])
         self.host = config['imgproxy_host']
@@ -24,7 +25,7 @@ class UrlGenerator:
         else:
             raise NotImplementedError
 
-    def generate_unsigned_url(self):
+    def generate_unsigned_url(self) -> str:
         self.prepare_options()
         encoded_url = base64.urlsafe_b64encode(self.url.encode()).rstrip(b"=").decode()
         # You can trim padding spaces to get good-looking url
@@ -40,7 +41,7 @@ class UrlGenerator:
         )
         return path
 
-    def generate_signed_url(self):
+    def generate_signed_url(self) -> str:
         unsigned_url = self.generate_unsigned_url().encode()
         digest = hmac.new(self.key, msg=self.salt + unsigned_url, digestmod=hashlib.sha256).digest()
         protection = base64.urlsafe_b64encode(digest).rstrip(b"=")
@@ -50,5 +51,5 @@ class UrlGenerator:
         )
         return url.decode()
 
-    def get_full_signed_url(self):
+    def get_full_signed_url(self) -> str:
         return urljoin(self.host, self.generate_signed_url())
